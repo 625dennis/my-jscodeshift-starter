@@ -10,7 +10,6 @@ const transform: Transform = (file, api) => {
             path.value.kind = 'let';
         });
 
-    root.find(jscodeshift.Identifier).replaceWith(jscodeshift.identifier('foo'));
     return root.toSource();
 };
 
